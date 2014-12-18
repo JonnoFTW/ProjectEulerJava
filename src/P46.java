@@ -1,12 +1,5 @@
-
 public class P46 {
-
-	public P46() {
-		// TODO Auto-generated constructor stub
-	}
-
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		int i =9;
 		while(true) {
 			if(!isPrime(i) && !gb(i)) {
@@ -27,13 +20,14 @@ public class P46 {
 		    return true;
 	}
 	private static boolean gb(int x){
+		
 		for (int i=2; i < x; i+=2) {
 			if (!isPrime(i)) {
 				continue;
 			}
 			for (int j =1; j < i;j++) {
 				if( i + (2 * (j*j)) == x) {
-					//System.out.printf("%d = %d + 2x%d^2%n",x,i,j);
+					System.out.printf("%d = %d + 2x%d^2%n",x,i,j);
 					return true;
 				}
 			}

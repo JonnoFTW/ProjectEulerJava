@@ -20,7 +20,7 @@ public class P50 {
 				int sum = sum(sub);			
 				if(sum > limit)
 					break;
-				if(isPrime(sum)) {
+				if(primeSet.contains(sum) || isPrime(sum)) {
 					max = sum;
 					longestSubList = sub;
 				}
@@ -52,7 +52,6 @@ public class P50 {
 	}
 	
 	private static boolean isPrime(int n) {
-		if (primeSet.contains(n)) return true;
 	    if (n<2) return false;
 	    if (n==2) return true;
 	    if (n%2==0)return false;

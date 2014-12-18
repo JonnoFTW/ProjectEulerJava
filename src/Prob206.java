@@ -3,8 +3,6 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 import java.util.regex.Pattern;
 
-
-
 public class Prob206 {
 	private static boolean running = true;
 	private static Pattern p = Pattern.compile("1\\d2\\d3\\d4\\d5\\d6\\d7\\d8\\d9\\d0");
@@ -36,6 +34,7 @@ public class Prob206 {
 		for(int i =0; i < Runtime.getRuntime().availableProcessors(); i++) {
 			ts.execute(new MyRunner(i));
 		}
+		ts.shutdown();
 		ts.awaitTermination(Long.MAX_VALUE, TimeUnit.DAYS);
 		long fin = System.nanoTime();
 		System.out.println("Took: "+((fin-started)/1000000000f)+"s");

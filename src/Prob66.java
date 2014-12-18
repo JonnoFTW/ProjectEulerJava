@@ -1,4 +1,3 @@
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -7,12 +6,8 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
-
 public class Prob66 {
 
-	public Prob66() {
-		// TODO Auto-generated constructor stub
-	}
 	private static class Dio {
 		double x;
 		long y,d;
@@ -79,7 +74,7 @@ public class Prob66 {
 				return Double.compare(o1.x, o2.x);
 			}
 		});
-		
+		System.out.println(Integer.MAX_VALUE);
 		System.out.println(ds.get(ds.size()-1)+" ");
 		long fin = System.nanoTime();
 		System.out.println("Took: "+((fin-started)/1000000000f)+"s");
