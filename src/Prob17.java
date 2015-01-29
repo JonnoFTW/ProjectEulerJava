@@ -42,13 +42,11 @@ public class Prob17 {
 		int hd = n/100;
 		int hr = n%100;
 		
-		if(x <= 2 && n < 20){
+		if(x <= 2 && n < 20) {
 			return nones[n];
-		}
-		else if (x==2 && n >= 20){
+		} else if (x==2 && n >= 20) {
 			return tens[td] +" " +nones[tr];
-		}
-		else {
+		} else {
 			String a;
 			if(hr == 0) a = " ";
 			else a = " and " + three2Word(hr);
