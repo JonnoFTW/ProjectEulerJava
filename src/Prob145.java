@@ -26,15 +26,9 @@ public class Prob145 {
 		if(s.endsWith("0"))
 			return false;
 		for (char c : Long.toString(d).toCharArray()) {
-			switch (c) {
-			case '0':
-			case '2':
-			case '4':
-			case '6':
-			case '8':
+			// all odd num ascii codes are also odd
+			if(c%2!=0)
 				return false;
-
-			}
 		}
 		return true;
 	}
