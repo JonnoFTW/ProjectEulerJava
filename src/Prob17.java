@@ -1,10 +1,7 @@
-
 public class Prob17 {
-
-
 	public static void main(String[] args) {
-		int sum = 0;
-		for(int i =0; i <= 1000; i++) {
+		long sum = 0;
+		for(long i =0; i <= 1000; i++) {
 			//System.out.printf("%,d: ",i);
 			String s = num2Word(i);
 			
@@ -14,15 +11,15 @@ public class Prob17 {
 		System.out.println(sum);
 	}
 	static String[] nones = {"","one","two","three","four","five","six","seven",
-			"eight","nine","ten","eleven","twelve","thirteen","fourteen",
-			"fifteen","sixteen","seventeen","eighteen","nineteen"};
+		                  	 "eight","nine","ten","eleven","twelve","thirteen","fourteen",
+			                 "fifteen","sixteen","seventeen","eighteen","nineteen"};
 	static String[] tens = {"","","twenty","thirty","forty","fifty","sixty","seventy","eighty","ninety"};
 	static String[] magnitudes = {"","thousand","million","billion","trillion","quadrillion","quintillion"};
 
-	private static int numLen(int x) {
+	private static int numLen(long x) {
 		return (int) Math.log10(x)+1;
 	}
-	private static String num2Word(int n) {
+	private static String num2Word(long n) {
 		StringBuilder out = new StringBuilder();
 		if(n < 0){
 			out.append("negative ");
@@ -53,5 +50,4 @@ public class Prob17 {
 			return nones[hd] + " hundred"+ a;
 		}
 	}
-
 }
